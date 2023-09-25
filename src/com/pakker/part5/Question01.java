@@ -21,7 +21,7 @@ public class Question01 {
 
         Arrays.sort(nArray);
 
-        System.out.println(nArray[0] + " " + nArray[nCnt-1]);
+        System.out.println(nArray[0] + " " + nArray[nCnt - 1]);
 
         // 1차
 //        Scanner scanner = new Scanner(System.in);

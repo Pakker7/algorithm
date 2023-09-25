@@ -14,8 +14,8 @@ public class Question02 {
         while (i < 9) {
             int n = scanner.nextInt();
             if (n > max) {
-               max = n;
-               maxIndex = i;
+                max = n;
+                maxIndex = i;
             }
             i++;
         }

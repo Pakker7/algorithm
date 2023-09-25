@@ -13,7 +13,7 @@ public class Question03 {
         Scanner S = new Scanner(System.in);
         int A[] = new int[10];
         int a = S.nextInt() * S.nextInt() * S.nextInt();
-        for (; a > 0; a /= 10){
+        for (; a > 0; a /= 10) {
             A[a % 10]++;
         }
         for (int i : A) {
