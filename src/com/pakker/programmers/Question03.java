@@ -1,6 +1,5 @@
 package com.pakker.programmers;
 
-import java.util.LinkedHashMap;
 
 //https://school.programmers.co.kr/learn/courses/30/lessons/142086
 public class Question03 {
