@@ -27,14 +27,11 @@ public class Question08 {
         return answer;
     }
     private static int cal(int aa) {
-        if (aa < 123  && aa > 96) {
+        if (aa <= 122 && aa >= 97) {
             return aa;
-        } else if ((aa % 122) + 96 > 122){
-            return cal((aa % 122) + 96);
         } else {
             return (aa % 122) + 96;
         }
-
     }
 
     public static void main(String[] args) { // A -> 65 / a -> 97
