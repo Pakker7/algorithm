@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 // 동빈나 왕실의 나이트
+// https://www.youtube.com/watch?v=2zjoKjt97vQ&list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC&index=2
+// 48:16 푸는중
 public class Question13 {
 
     // a1, b1, c1, d1, e1, f1...
