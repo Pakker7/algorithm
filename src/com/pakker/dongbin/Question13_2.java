@@ -1,6 +1,7 @@
 package com.pakker.dongbin;
 
 // 동빈나 왕실의 나이트
+// 구현 문제 완전탐색
 // https://www.youtube.com/watch?v=2zjoKjt97vQ&list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC&index=2
 public class Question13_2 {
 
