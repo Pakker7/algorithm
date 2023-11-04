@@ -1,4 +1,4 @@
-package com.pakker.programmers;
+package com.pakker.dongbin;
 
 // 구현 문제
 // 풀이를 떠올리는 것은 쉽지만 소스코드로 옮기기 어려운 것을 뜻한다.
