@@ -11,11 +11,11 @@ public class FindProduct {
 
 
     public class UniqueProduct {
-        public static String firstUniqueProduct(String[] products) {
+        public String firstUniqueProduct(String[] products) {
             throw new UnsupportedOperationException("Waiting to be implemented.");
         }
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
             System.out.println(firstUniqueProduct(new String[] { "Apple", "Computer", "Apple", "Bag"  }));
         }
     }
