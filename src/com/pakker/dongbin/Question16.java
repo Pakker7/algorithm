@@ -9,14 +9,20 @@ public class Question16 {
     // 2. 스택의 최상단 노드에 방문하지 않은 인접한 노드가 하나라도 있으면 그 노드를 스택에 넣고 방문처리합니다. 방문하지 않은 인접노드가 없으면 스택에서 최상단 노드를 꺼냅니다.
     // 3. 더이상 2번의 과정을 수행할 수 없을 때까지 반복합니다
 
+    //예를 들어, 미로찾기를 할 때 최대한 한 방향으로 갈 수 있을 때까지 쭉 가다가 더 이상 갈 수 없게 되면 다시 가장 가까운 갈림길로 돌아와서
+    //그 갈림길부터 다시 다른 방향으로 탐색을 진행하는 것이 깊이 우선 탐색 방식이라고 할 수 있습니다.
+    //모든 노드를 방문하고자 하는 경우에 이 방법을 선택함
+    //깊이 우선 탐색(DFS)이 너비 우선 탐색(BFS)보다 좀 더 간단함
+    //검색 속도 자체는 너비 우선 탐색(BFS)에 비해서 느림
+
     public static boolean[] visited = new boolean[9];
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 
     // dfs 함수 정의
     public static void dfs(int x) {
-        for (int i = 0; i < graph.size(); i++) {
-            System.out.println(graph.get(i));
-        }
+//        for (int i = 0; i < graph.size(); i++) {
+//            System.out.println(graph.get(i));
+//        }
 
         // 현재 노드를 방문 처리
         visited[x] = true;
