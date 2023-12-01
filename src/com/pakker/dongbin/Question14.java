@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 // 구현문제 완전탐색
-// 문자열 재정렬
+// 문자열 재정렬 https://unie2.tistory.com/112
 // 알파벳 오름차순 정렬 후, 남운 모든 숫자를 더해서 출력
 // ex. K1KA5CB7 -> ABCKK13
 // 확인해봐야 함
