@@ -19,9 +19,20 @@ import java.util.*;
 
 public class Question19 {
 
-    public static int n,m;
-    public static int[] graph= new int[]{};
-    public static boolean[] visited = new boolean[]{};
+    public static int n, m;
+    public static int[][] graph = new int[][]{};
+    public static int[] visited = new int[]{};
+
+    public static boolean dfs(int x) {
+        for(int i=0; i<n; i++) {
+            if(graph[x][i] == 0) {
+                visited[i] =0; // 미리 체크를 해줌으로서 연산의 낭비를 방지할 수 있다.
+                dfs(i);
+            }
+        }
+
+        return false;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,17 +41,33 @@ public class Question19 {
         m = sc.nextInt();
         sc.nextLine(); // 버퍼 지우기
 
-        visited = new boolean[n];
+        visited = new int[n];
 
-        // 2차원 리스트의 맵 정보 입력 받기
+        // input을 2차원 배열 인접행렬로 만들기
+        graph = new int[n + 1][n + 1];
+        for (int i = 0; i < m; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            graph[a][b] = 1;
+            graph[b][a] = 1;
+        }
+
+        // 출력
+        for (int i = 0; i < graph.length; i++) {
+            for (int j = 0; j < graph[i].length; j++) {
+                System.out.print(graph[i][j] + " ");
+            }
+            System.out.println("");
+        }
+
+
+        int result = 0;
         for (int i = 0; i < n; i++) {
-            String str = sc.nextLine();
-            graph[i] = str.charAt(i) - '0';
+            if (dfs(i)) {
+                result += 1;
+            }
         }
 
-        for() {
-
-        }
-
+        System.out.println(" result : " + result);
     }
 }

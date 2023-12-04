@@ -1,16 +1,19 @@
 package com.pakker.dongbin;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 //음료수 얼려먹기 문제
 
 // 입력값
-//4 5
-//00110
-//00011
-//11111
-//00000
-
+/*
+4 5
+00110
+00011
+11111
+00000
+*/
 public class Question18 {
 
     public static int n, m;
@@ -48,7 +51,9 @@ public class Question18 {
         for (int i = 0; i < n; i++) {
             String str = sc.nextLine();
             for (int j = 0; j < m; j++) {
-                graph[i][j] = str.charAt(j) - '0';
+                int aa = str.charAt(j) - '0';
+                graph[i][j] = str.charAt(j) - '0'; // 0 or 1의 2차원 리스트가 담길수 있게 함
+
             }
         }
 
