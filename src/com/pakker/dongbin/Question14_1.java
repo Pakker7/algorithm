@@ -8,7 +8,7 @@ import java.util.ArrayList;
 // 알파벳 오름차순 정렬 후, 남운 모든 숫자를 더해서 출력
 // ex. K1KA5CB7 -> ABCKK13
 // 확인해봐야 함
-public class Question14 {
+public class Question14_1 {
     public String solution(String str) {
         String result = "";
         String[] strAry = str.split("");
@@ -24,12 +24,11 @@ public class Question14 {
                 result = result + strAry[i];
             }
         }
-        result = result + sum;
-        return result;
+        return result + sum;
     }
 
     public static void main(String[] args) {
-        Question14 question14 = new Question14();
+        Question14_1 question14 = new Question14_1();
         System.out.println(question14.solution("K1KA5CB7")); // 답은 ABCKK13
     }
 }
