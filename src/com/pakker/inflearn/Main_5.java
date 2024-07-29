@@ -1,8 +1,9 @@
 package com.pakker.inflearn;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Main {
+public class Main_5 {
 
     public static ArrayList<Integer> solution(int n, int[] arr) {
         ArrayList<Integer> result = new ArrayList<>();
@@ -17,7 +18,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
+        Main_5 main = new Main_5();
         Scanner sc = new Scanner (System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];

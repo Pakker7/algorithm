@@ -40,7 +40,7 @@ public class test {
     }
 
 
-    class RainStorm extends Storm{
+    class RainStorm extends Storm {
 
         public RainStorm(double eyeRadius, double eyePositionX, double eyePositionY) {
             this.eyeRadius = eyeRadius;
@@ -109,7 +109,6 @@ public class test {
         }
 
     }
-
 
 
 }
