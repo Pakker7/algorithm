@@ -1,34 +1,47 @@
 package com.pakker.inflearn;
+import java.util.*;
 
-import java.util.Scanner;
-11 다시하기..
+
 public class Main_7 {
 
-    public int solution(int[][] data, int totalN) {
-        int[] sameClassCnt = new int[totalN + 1]; // 학생별 같은 반 수 카운트
-        int result = 0; // 임시 반장 후보
-        int max = 0; // 최대 같은 반 수
+    //List<Set<String>>
+    //1번학생 Set<> x
+    //2번학생 Set<> 4번
+    //3번학생 Set<> 4번, 5번
+    //4번학생 Set<> 3번, 5번, 2번,
+    //5번학생 Set<> 3번, 4번
 
-        for (int n = 1; n <= totalN; n++) { // 기준 학생
-            for (int j = 1; j <= 5; j++) { // 학년
-                for (int i = 1; i <= totalN; i++) { // 비교 학생
-                    if (n != i && data[n][j] == data[i][j]) { // 같은 반이면
-                        sameClassCnt[n]++;
-                        break; // 같은 학년에서는 한 번만 카운트
+    public int solution(int[][] data, int totalN) {
+
+        List<Set<Integer>> sameClassList = new ArrayList<>();
+
+        for (int i =1; i <= totalN ; i ++) { //1번 학생을 뜻함
+            Set<Integer> sameClassFriend = new HashSet<>();
+            for (int j=1; j<= 5; j++) {
+                int class_ = data[i][j]; // 1번 학생의 j학년
+
+                for (int k=1; k<= totalN ; k++) { // 비교하는 n번 학생
+                    if (i == k) {
+                        continue;
+                    }
+                    if (class_ == data[k][j]) {
+                        sameClassFriend.add(k);
                     }
                 }
             }
+            sameClassList.add(sameClassFriend);
+        }
 
-            // 최대 같은 반 수 및 임시 반장 결정
-            if (sameClassCnt[n] > max) {
-                max = sameClassCnt[n];
-                result = n;
-            } else if (sameClassCnt[n] == max) { // 같은 최대값이면 번호가 작은 학생 선택
-                if (n < result) result = n;
+        int result = 0;
+        int number = 0;
+        for (int i= 1; i<= sameClassList.size(); i++){
+            if (result < sameClassList.get(i-1).size() ) {
+                result = sameClassList.get(i-1).size();
+                number = i;
             }
         }
 
-        return result;
+        return number;
     }
 
     public static void main(String[] args) {
