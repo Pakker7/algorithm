@@ -1,7 +1,5 @@
 package com.pakker.part5;
 
-import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
